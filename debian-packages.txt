@@ -1,0 +1,4 @@
+automake
+git
+libfftw3-bin
+libtool

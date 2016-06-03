@@ -1,0 +1,13 @@
+#!/bin/bash -e
+
+# Make sure we're using our custom rpxc image
+export RPXC_IMAGE=rpxc-with-extras
+
+# autogen.sh works fine on it's own
+rpxc ./autogen.sh
+
+# configure needs the --host flag, and to be told where to find curses.h
+rpxc bash -c 'CPPFLAGS=-I$PREFIX/include/ncursesw ./configure --host=$HOST'
+
+# once configured properly, make works fine
+rpxc make
