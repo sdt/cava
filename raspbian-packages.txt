@@ -1,4 +1,0 @@
-libasound2-dev
-libfftw3-dev
-libncursesw5-dev
-libpulse-dev
